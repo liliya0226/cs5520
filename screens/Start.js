@@ -60,20 +60,27 @@ export default function Start({
     setNumberError("");
     setChosenNumber("");
     setIsCheckedBoxSelected(false);
+    setChosenNumber(
+      Math.floor(Math.random() * 10) + 1020
+    );
+    
   };
 
   const handleStart = () => {
     if (validateUserInput()) {
       handleGame(userName, number);
     }
+    console.log(chosenNumber);
+
+
   };
 
   const handleGame = (name, number) => {
     setUserName(name);
     setNumber(number);
     setGuessNumber(number);
+    console.log(chosenNumber);
 
-    setChosenNumber(1023)
     if (parseInt(number) === chosenNumber) {
       setSuccess(true);
     } else {

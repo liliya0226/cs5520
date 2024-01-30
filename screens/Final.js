@@ -34,6 +34,7 @@ const Final = ({ chosenNumber, success, onReset }) => {
   };
 
   return (
+    <Color>
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Game is Over</Text>
       <Card>
@@ -44,41 +45,43 @@ const Final = ({ chosenNumber, success, onReset }) => {
         </View>
       </Card>
     </SafeAreaView>
+    </Color>
   );
 };
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+  container:{
+      flex:1,
+      flexDirection:'column',
+      alignItems:'center',
+      justifyContent:'center',
   },
 
-  header: {
-    color: "darkblue",
-    fontSize: 24,
-    paddingBottom: "10%",
+  header:{
+      color: 'darkblue',
+      fontSize:24,
+      paddingBottom:'10%'
   },
 
-  cardHeader: {
-    color: "darkblue",
-    fontSize: 20,
-    marginBottom: "10%",
+  cardHeader:{
+      color: 'darkblue',
+      fontSize:20,
+      marginBottom:'10%'
   },
 
   image: {
-    width: 190,
-    height: 190,
-    alignSelf: "center",
-    marginBottom: "10%",
-  },
+      width: 190,
+      height: 190,
+      alignSelf:'center',
+      marginBottom:'10%',
+    },
 
-  cardContainer: {
-    flexDirection: "column",
-    alignSelf: "center",
-    marginTop: "10%",
+  cardContainer:{
+      flexDirection:'column',
+      alignSelf:'center',
+      marginTop:'10%',
   },
-});
+})
 
 export default Final;

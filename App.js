@@ -9,7 +9,9 @@ export default function App() {
   //initialize name and number
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const [chosenNumber, setChosenNumber] =useState('')
+  const [chosenNumber, setChosenNumber] = useState(
+    () => Math.floor(Math.random() * 10) + 1020
+  );
   const [screen, setScreen] = useState('start');
   const [guessCountLeft, setGuessCountLeft] = useState(3);
   const [disabled, setDisabled] = useState(false);
@@ -19,7 +21,7 @@ export default function App() {
       setName('');
       setNumber('');
       setGuessCountLeft(3);
-      setChosenNumber('')
+      setChosenNumber( Math.floor(Math.random() * 10) + 1020)
       setDisabled(false);
       setScreen('start');
   }
